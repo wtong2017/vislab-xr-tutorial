@@ -158,6 +158,36 @@ Now, you should be able to see the treasure is respawned to a new seat when you 
 
 ## Task 5: Build the app
 
-Lastly, we are going to build the app. We will use the `Build Settings` to build the app.
+Lastly, we are going to build the app.
 
 1. Click `File` -> `Build Settings`
+    <details>
+    <summary>Android</summary>
+    1. Click `Switch Platform` and select `Android`
+    2. Select `Player Setting`
+    3. Uncheck `Auto Graphics API`
+    4. Remove `Vulkan` from the `Graphics APIs` list (if it is there)
+    5. Change the `Minimum API Level` to `Android 7.0 Nougat (API Level 24)`
+    6. Change the `Scripting Backend` to `IL2CPP`
+    7. Add `ARM64` to the `Target Architectures` list
+    </details>
+
+    <details><summary>iOS</summary>
+    1. Click `Switch Platform` and select `iOS`
+
+    </details>
+2. Click `XR Settings`
+3. Check `AR Core` and `AR Kit` (if you are building for iOS)
+4. Click `Build And Run`
+
+## Task 6: Enhance the app
+
+Now, you have completed the tutorial. You can try to enhance the app by adding more features. For example, you can add a timer to the game. You can also add a score system to the game. You can also add a leaderboard to the game.
+
+For AR, you can try to make the wall transparent. You can also try to add some hints to the game. You can also try to add some sound effects to the game.
+
+For AR interaction, you can try to add more interaction to the world. For example, you can add a button to the world to open the treasure. You can also add a button to the world to respawn the treasure.
+
+## Conclusion
+
+In this tutorial, you have learned how to create an AR treasure hunt game using Unity and AR Foundation. You have also learned how to use the XR Interaction Toolkit to create the AR player and the interaction with the treasure. You have also learned how to build the app for Android and iOS.
