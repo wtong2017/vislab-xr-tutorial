@@ -9,6 +9,8 @@ We will implement a mobile AR treasure hunting game. The goal of the game is to 
 ## Prerequiste
 
 1. computer with Unity version 2021.3.13 lts (macOS must be used to build app for iOS) and empty space > 2gb
+    1. [Unity Hub](https://unity3d.com/get-unity/download)
+    2. Make sure the build tool for Android or iOS is installed
 2. A mobile device (tablet or phone) with > 1gb empty space (iOS devices are more prefered)
 3. usb that can connect your mobile devices and computer
 4. code editor (visual studio is preferred, could be installed together with Unity)
@@ -127,7 +129,7 @@ Finally, we are going to implement the interaction with the treasure. We will us
 
         // Start is called before the first frame update
         void Start() {
-            RespwanTreasure(null);
+            RespwanTreasure(default(SelectEnterEventArgs));
         }
 
         public void RespwanTreasure(SelectEnterEventArgs arg0) {
@@ -163,6 +165,7 @@ Lastly, we are going to build the app.
 1. Click `File` -> `Build Settings`
     <details>
     <summary>Android</summary>
+
     1. Click `Switch Platform` and select `Android`
     2. Select `Player Setting`
     3. Uncheck `Auto Graphics API`
@@ -173,11 +176,14 @@ Lastly, we are going to build the app.
     </details>
 
     <details><summary>iOS</summary>
+
     1. Click `Switch Platform` and select `iOS`
+    2. Select `Player Setting`
+    3. Add a message to the `Camera Usage Description` field (e.g. `This app requires camera access to scan the treasure`)
 
     </details>
-2. Click `XR Settings`
-3. Check `AR Core` and `AR Kit` (if you are building for iOS)
+2. Click `XR Plugin Management`
+3. Click `Android` => `ARCore` or `iOS` => `ARKit`
 4. Click `Build And Run`
 
 ## Task 6: Enhance the app
